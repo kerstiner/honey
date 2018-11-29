@@ -1,0 +1,10 @@
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+.inputTodo{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
