@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 </head>
 
 <body>
   <div class="container">
     <div class="row">
       <div class="inputTodo col-md-12">
-          <input class="to-do-task" placeholder="Enter ToDo Text" type="text" id="task">
+          <input class="to-do-task" placeholder="To Do's" type="text" id="task">
           <span class="underline"></span>
-          <button class="add btn btn-info"><span class="glyphicon glyphicon-add"></span>add</button>
+          <button class="add btn btn-info"><span class="glyphicon glyphicon-plus"></span> add</button>
       </div>
     </div>
   </div>
@@ -27,39 +29,37 @@
                 <th></th>
                 <th>To Do's</th>
                 <th>
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown button</button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Done</a>
-                    <a class="dropdown-item" href="#">To Do's</a>
-                    <a class="dropdown-item" href="#">All</a>
-                  </div>
-                </th>
-                <th></th>
+                  <select class="dropdown">
+                      <option value="done">Done</option>
+                      <option value="to-do">To do/s</option>
+                      <option value="all">All</option>
+                  </select>
+               </th>
               </tr>
             </thead>
             <tbody>
               <tr class="tableRow">
                 <td><input class= "done-task" type="checkbox"> </td>
                 <td class="show-to-do" id="showInput1"><span contenteditable="false">xxx</span></td>
-                <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span>edit</button>
-                    <button class="save btn btn-info"><span class="glyphicon glyphicon-save"></span>save</button>|
-                    <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-delete"></span>delete</button>
+                <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span> edit</button>
+                    <button class="save btn btn-info"><span class="glyphicon glyphicon-save"></span> save</button>
+                    <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-trash"></span> delete</button>
                 </td>
               </tr>
               <tr class="tableRow">
                 <td><input class= "done-task" type="checkbox"> </td>
-                <td class="show-to-do" id="showInput2"><span contenteditable="false">xxx</span></td>
-                <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span>edit</button>
-                  <button class="save btn btn-info"><span class="glyphicon glyphicon-save"></span>save</button>|
-                  <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-delete"></span>delete</button>
+                <td class="show-to-do" id="showInput2"><span contenteditable="false">yyy</span></td>
+                <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span> edit</button>
+                  <button class="save btn btn-info"><span class="glyphicon glyphicon-save"></span> save</button>
+                  <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-trash"></span> delete</button>
                 </td>
               </tr>
               <tr class="tableRow">
                 <td><input class= "done-task" type="checkbox" > </td>
-                <td class="show-to-do" id="showInput3"><span contenteditable="false">xxx</span></td>
-                <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span>edit</button>
-                    <button class="save btn btn-info"><span class="glyphicon glyphicon-save"></span>save</button>|
-                    <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-delete"></span>delete</button>
+                <td class="show-to-do" id="showInput3"><span contenteditable="false">zzz</span></td>
+                <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span> edit</button>
+                    <button class="save btn btn-info"><span class="glyphicon glyphicon-save"></span> save</button>
+                    <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-trash"></span> delete</button>
                 </td>
               </tr>
             </tbody>
@@ -68,6 +68,7 @@
     </div>
   </div>
 <script type="text/javascript" src="vendor/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="assets/js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 </html>
