@@ -11,3 +11,19 @@ input {
 .strike{
 	text-decoration: line-through;
 }
+
+.save{
+	display: none;
+	color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    padding: 6px 9px;
+    vertical-align: middle;
+    border-radius: 4px;
+}
+
+.dropdown{
+	color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}

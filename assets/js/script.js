@@ -11,8 +11,6 @@ $(document).ready(function(){
   var checkTask = $(".done-todo-task");
   var dropDown = $(".dropdown");
 
-  save.hide();
-
   $(document).on('click', '.delete-button', function(){
     $(this).closest('tr').remove();
     return false;
@@ -35,7 +33,7 @@ $(document).ready(function(){
     var result = "<tr class='tableRow'><td><input class='done-task' type='checkbox'></td>" +
                 "<td class='show-to-do' id='showInput1'><span contenteditable='false'> " + task + "</span></td> " +
                 "<td><button class='button-edit btn btn-info'><span class='glyphicon glyphicon-edit'></span> edit</button> " +
-                "<button class='save btn btn-info'><span class='glyphicon glyphicon-save'></span> save</button> " +
+                "<button class='save'><span class='glyphicon glyphicon-save'></span> save</button> " +
                 "<button class='btn btn-info delete-button'><span class='glyphicon glyphicon-trash'></span> delete</button></td></tr>";
     $("table tbody").prepend(result);
     $("#task").val("");
@@ -43,8 +41,6 @@ $(document).ready(function(){
 
   $(document).on('click', '.done-task', function(){
     $(this).parents(".tableRow").find(".show-to-do").toggleClass("strike");
-    $(this).parents(".tableRow").find(".button-edit").hide();
-    $(this).parents(".tableRow").find(".done-task").hide();
 
   });
 
@@ -52,9 +48,10 @@ $(document).ready(function(){
     var task = $(this).val();
     if (task === 'done') {
       $("input:checkbox:checked").parents(".tableRow").show();
-      $(this).is(":not(:checked)").parents(".tableRow").hide();
+      $("input:checkbox:not(:checked)").parents(".tableRow").hide();
     } else if (task === 'to-do' ){
       $("input:checkbox:checked").parents(".tableRow").hide();
+      $("input:checkbox:not(:checked)").parents(".tableRow").show();
     }else if (task === 'all' ){
       $("input:checkbox").parents(".tableRow").show();
     }
