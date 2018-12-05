@@ -27,3 +27,15 @@ input {
     background-color: #5bc0de;
     border-color: #46b8da;
 }
+
+.error{
+  display: none;
+  margin-left: 10px;
+}
+
+.test {
+  display: none;
+  color: red;
+  margin-left: 0px;
+  margin-bottom: 2px;
+}

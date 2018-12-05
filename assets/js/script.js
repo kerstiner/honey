@@ -10,6 +10,7 @@ $(document).ready(function(){
   var add = $(".add");
   var checkTask = $(".done-todo-task");
   var dropDown = $(".dropdown");
+  var error = $(".error");
 
   $(document).on('click', '.delete-button', function(){
     $(this).closest('tr').remove();
@@ -23,20 +24,38 @@ $(document).ready(function(){
   });
 
   $(document).on('click', '.save', function(){
-    $(this).parents(".tableRow").find(".save").hide();
-    $(this).parents(".tableRow").find(".button-edit").show();
-    $(this).parents(".tableRow").find("span").attr("contenteditable", false); 
+    var taskValue = $(this).parents(".tableRow").find("span").text();
+    if (taskValue === "") {
+      $(this).parents(".tableRow").find(".test").show();
+    } else {
+      $(".test").hide();
+      $(this).parents(".tableRow").find(".save").hide();
+      $(this).parents(".tableRow").find(".button-edit").show();
+      $(this).parents(".tableRow").find("span").attr("contenteditable", false);
+    }
+    
   });
 
   $(document).on('click', '.add', function(){
     var task = $("#task").val();
-    var result = "<tr class='tableRow'><td><input class='done-task' type='checkbox'></td>" +
+
+    if (task === "") {
+      error.text("This field is required!");
+      error.css({"display": "inline"});
+      error.css({"color": "red"});
+    } else {
+      error.css({"display": "none"});
+
+      var result = "<tr class='tableRow'><td><input class='done-task' type='checkbox'></td>" +
                 "<td class='show-to-do' id='showInput1'><span contenteditable='false'> " + task + "</span></td> " +
                 "<td><button class='button-edit btn btn-info'><span class='glyphicon glyphicon-edit'></span> edit</button> " +
                 "<button class='save'><span class='glyphicon glyphicon-save'></span> save</button> " +
                 "<button class='btn btn-info delete-button'><span class='glyphicon glyphicon-trash'></span> delete</button></td></tr>";
     $("table tbody").prepend(result);
     $("#task").val("");
+
+    }
+
   });
 
   $(document).on('click', '.done-task', function(){

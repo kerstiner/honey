@@ -15,7 +15,7 @@
     <div class="row">
       <div class="inputTodo col-md-12">
           <input class="to-do-task" placeholder="To Do's" type="text" id="task">
-          <span class="underline"></span>
+          <span class="error underline">This field is required!</span>
           <button class="add btn btn-info"><span class="glyphicon glyphicon-plus"></span> add</button>
       </div>
     </div>
@@ -30,7 +30,7 @@
                 <th>To Do's</th>
                 <th>
                   <select class="dropdown">
-                      <option>--- Choose To Filter Here ---</option>
+                      <option>--- Choose To Filter ---</option>
                       <option value="done">Done</option>
                       <option value="to-do">To do/s</option>
                       <option value="all">All</option>
@@ -41,8 +41,11 @@
             <tbody>
               <tr class="tableRow">
                 <td><input class= "done-task" type="checkbox"> </td>
-                <td class="show-to-do" id="showInput1"><span contenteditable="false">xxx</span></td>
+                <td class="show-to-do" id="showInput1">
+                  <span contenteditable="false">xxx</span>
+                </td>
                 <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span> edit</button>
+                    <p class="test">This field is required!</p>
                     <button class="save"><span class="glyphicon glyphicon-save"></span> save</button>
                     <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-trash"></span> delete</button>
                 </td>
@@ -51,6 +54,7 @@
                 <td><input class= "done-task" type="checkbox"> </td>
                 <td class="show-to-do" id="showInput2"><span contenteditable="false">yyy</span></td>
                 <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span> edit</button>
+                  <p class="test">This field is required!</p>
                   <button class="save"><span class="glyphicon glyphicon-save"></span> save</button>
                   <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-trash"></span> delete</button>
                 </td>
@@ -59,6 +63,7 @@
                 <td><input class= "done-task" type="checkbox" > </td>
                 <td class="show-to-do" id="showInput3"><span contenteditable="false">zzz</span></td>
                 <td><button class="button-edit btn btn-info"><span class="glyphicon glyphicon-edit"></span> edit</button>
+                    <p class="test">This field is required!</p>
                     <button class="save"><span class="glyphicon glyphicon-save"></span> save</button>
                     <button class="btn btn-info delete-button"><span class="glyphicon glyphicon-trash"></span> delete</button>
                 </td>
